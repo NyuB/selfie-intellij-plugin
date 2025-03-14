@@ -155,3 +155,6 @@ intellijPlatformTesting {
         }
     }
 }
+
+// Include generated files to sources
+sourceSets["main"].java.srcDirs("src/main/gen")

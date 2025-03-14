@@ -1,0 +1,23 @@
+{
+  parserClass="io.github.nyub.selfieintellijplugin.language.SelfieParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Selfie"
+  psiImplClassSuffix="Impl"
+  psiPackage="io.github.nyub.selfieintellijplugin.language"
+  psiImplPackage="io.github.nyub.selfieintellijplugin.language"
+
+  elementTypeHolderClass="io.github.nyub.selfieintellijplugin.language.SelfieTypes"
+  elementTypeClass="io.github.nyub.selfieintellijplugin.language.SelfieElementType"
+  tokenTypeClass="io.github.nyub.selfieintellijplugin.language.SelfieTokenType"
+}
+
+selfieFile ::= snapshot+
+
+snapshot ::= HEADER body
+
+body ::= SNAPSHOT_CONTENT {
+    implements=["com.intellij.psi.PsiLanguageInjectionHost"]
+    mixin="io.github.nyub.selfieintellijplugin.language.SelfieSnapshotBodyMixin"
+}

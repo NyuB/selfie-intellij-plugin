@@ -1,0 +1,13 @@
+Selfie file
+  SelfieSnapshotImpl(SNAPSHOT)
+    PsiElement(SelfieTokenType.HEADER)('╔═ A ═╗\n')
+    SelfieBodyImpl(BODY)
+      PsiElement(SelfieTokenType.SNAPSHOT_CONTENT)('A1\nA2\n')
+  SelfieSnapshotImpl(SNAPSHOT)
+    PsiElement(SelfieTokenType.HEADER)('╔═ B ═╗\n')
+    SelfieBodyImpl(BODY)
+      PsiElement(SelfieTokenType.SNAPSHOT_CONTENT)('B1\n\n')
+  SelfieSnapshotImpl(SNAPSHOT)
+    PsiElement(SelfieTokenType.HEADER)('╔═ C ═╗\n')
+    SelfieBodyImpl(BODY)
+      PsiElement(SelfieTokenType.SNAPSHOT_CONTENT)('C1\n C2\n  C3')

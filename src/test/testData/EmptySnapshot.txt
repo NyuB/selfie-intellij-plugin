@@ -1,0 +1,4 @@
+Selfie file
+  PsiElement(SelfieTokenType.HEADER)('╔═ Empty ═╗')
+  PsiErrorElement:SelfieTokenType.SNAPSHOT_CONTENT expected
+    <empty list>

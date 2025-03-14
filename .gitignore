@@ -3,3 +3,9 @@
 .intellijPlatform
 .qodana
 build
+
+# JFlex related artifacts
+*idea-flex.skeleton
+jflex-*.jar
+
+src/**/gen

@@ -1,0 +1,17 @@
+Selfie file
+  PsiErrorElement:SelfieTokenType.HEADER expected, got 'M'
+    PsiElement(BAD_CHARACTER)('M')
+  PsiElement(DUMMY_BLOCK)
+    PsiElement(BAD_CHARACTER)('i')
+    PsiElement(BAD_CHARACTER)('s')
+    PsiElement(BAD_CHARACTER)('s')
+    PsiElement(BAD_CHARACTER)('i')
+    PsiElement(BAD_CHARACTER)('n')
+    PsiElement(BAD_CHARACTER)('g')
+    PsiElement(BAD_CHARACTER)(' ')
+    PsiElement(BAD_CHARACTER)('h')
+    PsiElement(BAD_CHARACTER)('e')
+    PsiElement(BAD_CHARACTER)('a')
+  PsiElement(BAD_CHARACTER)('d')
+  PsiElement(BAD_CHARACTER)('e')
+  PsiElement(BAD_CHARACTER)('r')

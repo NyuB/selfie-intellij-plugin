@@ -1,0 +1,5 @@
+Selfie file
+  SelfieSnapshotImpl(SNAPSHOT)
+    PsiElement(SelfieTokenType.HEADER)('╔═ Header ═╗\n')
+    SelfieBodyImpl(BODY)
+      PsiElement(SelfieTokenType.SNAPSHOT_CONTENT)('Single line')
