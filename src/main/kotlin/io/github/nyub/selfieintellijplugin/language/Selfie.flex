@@ -17,14 +17,18 @@ import io.github.nyub.selfieintellijplugin.language.SelfieTypes;
 %eof}
 
 CONTENT_STRING=((([^╔\n\r][^\n]*)\n?)|\n)*
-HEADER=[^═╗\n\r]+
-TOP_LEFT_CORNER=╔═
-TOP_RIGHT_CORNER=═╗
+PATH_ELEMENT=[^═╗/\n\r]*[^═╗/\n\r\s]
+PATH_SEPARATOR=[/]
+TOP_LEFT_CORNER=╔═\s
+TOP_RIGHT_CORNER=\s═╗\n
 
 %state SNAPSHOT_CONTENT
 
 %%
+<YYINITIAL>        {TOP_LEFT_CORNER}       { return SelfieTypes.LEFT_CORNER; }
+<YYINITIAL>        {PATH_ELEMENT}          { return SelfieTypes.PATH_ELEMENT; }
+<YYINITIAL>        {PATH_SEPARATOR}        { return SelfieTypes.PATH_SEPARATOR; }
+<YYINITIAL>        {TOP_RIGHT_CORNER}      { yybegin(SNAPSHOT_CONTENT); return SelfieTypes.RIGHT_CORNER; }
+<SNAPSHOT_CONTENT> {CONTENT_STRING}        { yybegin(YYINITIAL); return SelfieTypes.SNAPSHOT_CONTENT; }
 
-{TOP_LEFT_CORNER} {HEADER} {TOP_RIGHT_CORNER}\n? { yybegin(SNAPSHOT_CONTENT); return SelfieTypes.HEADER; }
-<SNAPSHOT_CONTENT> {CONTENT_STRING}              { yybegin(YYINITIAL); return SelfieTypes.SNAPSHOT_CONTENT; }
-[^]                                              { return TokenType.BAD_CHARACTER; }
+                   [^]                     { return TokenType.BAD_CHARACTER; }
