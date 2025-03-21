@@ -4,6 +4,7 @@ junit = "4.13.2"
 
 # plugins
 changelog = "2.2.1"
+grammarKit = "2022.3.2.2"
 intelliJPlatform = "2.1.0"
 kotlin = "1.9.25"
 kover = "0.8.3"
@@ -14,6 +15,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
+grammarKit = { id = "org.jetbrains.grammarkit", version.ref = "grammarKit" }
 intelliJPlatform = { id = "org.jetbrains.intellij.platform", version.ref = "intelliJPlatform" }
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }

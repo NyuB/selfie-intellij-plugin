@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlin) // Kotlin support
     alias(libs.plugins.intelliJPlatform) // IntelliJ Platform Gradle Plugin
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
+    alias(libs.plugins.grammarKit)
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
 }
@@ -98,7 +99,8 @@ intellijPlatform {
         // The pluginVersion is based on the SemVer (https://semver.org) and supports pre-release labels, like 2.1.7-alpha.3
         // Specify pre-release label to publish the plugin in a custom Release Channel automatically. Read more:
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
-        channels = providers.gradleProperty("pluginVersion").map { listOf(it.substringAfter('-', "").substringBefore('.').ifEmpty { "default" }) }
+        channels = providers.gradleProperty("pluginVersion")
+            .map { listOf(it.substringAfter('-', "").substringBefore('.').ifEmpty { "default" }) }
     }
 
     pluginVerification {
@@ -125,11 +127,32 @@ kover {
     }
 }
 
+// Include generated files to sources
+sourceSets["main"].java.srcDirs("src/main/gen")
 tasks {
     wrapper {
         gradleVersion = providers.gradleProperty("gradleVersion").get()
     }
-
+    generateParser {
+        sourceFile.set(file("src/main/kotlin/io/github/nyub/selfieintellijplugin/language/Selfie.bnf"))
+        pathToParser.set("/io/github/nyub/selfieintellijplugin/language/SelfieParser.java")
+        pathToPsiRoot.set("/io/github/nyub/selfieintellijplugin/language")
+        targetRootOutputDir.set(file("src/main/gen"))
+        purgeOldFiles.set(true)
+    }
+    generateLexer {
+        sourceFile.set(file("src/main/kotlin/io/github/nyub/selfieintellijplugin/language/Selfie.flex"))
+        targetOutputDir.set(file("src/main/gen/io/github/nyub/selfieintellijplugin/language"))
+        targetFile("SelfieLexer")
+        purgeOldFiles.set(false)
+        dependsOn(generateParser)
+    }
+    compileKotlin {
+        dependsOn(generateLexer)
+    }
+    compileJava {
+        dependsOn(generateLexer)
+    }
     publishPlugin {
         dependsOn(patchChangelog)
     }
@@ -155,6 +178,3 @@ intellijPlatformTesting {
         }
     }
 }
-
-// Include generated files to sources
-sourceSets["main"].java.srcDirs("src/main/gen")
