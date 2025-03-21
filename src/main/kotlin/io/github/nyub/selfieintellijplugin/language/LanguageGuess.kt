@@ -1,4 +1,5 @@
 @file:JvmName("LanguageGuess")
+
 package io.github.nyub.selfieintellijplugin.language
 
 import com.intellij.lang.Language
@@ -7,7 +8,10 @@ fun guessLanguage(selfieHeader: String): Language? {
     val regex = Regex("([.][^./\\s\\t\\n\\r]+)?\\s*(\\[[^]]+])?$")
     val find = regex.find(selfieHeader) ?: return null
     val extension = find.groups[1]?.value?.substringAfter('.')
-    val facet = find.groups[2]?.value?.substringAfter('[')?.substringBefore(']')
+    val facet = find.groups[2]?.value
+        ?.substringAfter('[')
+        ?.substringBefore(']')
+        ?.substringAfterLast(".")
     val idToSearch = facet ?: extension ?: return null
     val mappedId = languageExtensionTable.firstNotNullOfOrNull { (id, ext) ->
         id.takeIf { ext.contains(idToSearch) }

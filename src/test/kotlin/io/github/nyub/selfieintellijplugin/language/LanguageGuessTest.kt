@@ -17,6 +17,14 @@ class LanguageGuessTest : LightPlatformTestCase() {
         guessLanguage("a [json]") isEqualTo JsonLanguage.INSTANCE
     }
 
+    fun `test guess by facet extension`() {
+        guessLanguage("[a.json]") isEqualTo JsonLanguage.INSTANCE
+    }
+
+    fun `test guess by facet extension multiple dots`() {
+        guessLanguage("[a.nothing.json]") isEqualTo JsonLanguage.INSTANCE
+    }
+
     fun `test when both extension and facet specified, choose facet`() {
         guessLanguage("a.txt [json]") isEqualTo JsonLanguage.INSTANCE
     }
