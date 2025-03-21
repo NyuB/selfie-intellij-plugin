@@ -4,4 +4,6 @@
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Selfie snapshot file detection and parsing
+- Language injection within snapshots
+- Automatic language injection from snapshot headers
