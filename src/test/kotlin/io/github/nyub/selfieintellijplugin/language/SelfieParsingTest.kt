@@ -1,7 +1,6 @@
 package io.github.nyub.selfieintellijplugin.language
 
 import com.intellij.testFramework.ParsingTestCase
-import io.github.nyub.selfieintellijplugin.language.SelfieParserDefinition
 import kotlin.io.path.Path
 import kotlin.io.path.listDirectoryEntries
 import kotlin.io.path.nameWithoutExtension
