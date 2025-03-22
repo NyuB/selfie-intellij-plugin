@@ -9,7 +9,7 @@ import kotlin.reflect.full.functions
 internal class SelfieParsingTest : ParsingTestCase("", "ss", SelfieParserDefinition()) {
 
     fun testHeaderPath() = doTest(true)
-    fun testEmptySnapshot() = doTest(true)
+    fun testMissingContent() = doTest(true)
     fun testMissingHeader() = doTest(true)
     fun testMultipleSnapshots() = doTest(true)
     fun testSingleLineSnapshot() = doTest(true)

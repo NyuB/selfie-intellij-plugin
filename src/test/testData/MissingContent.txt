@@ -1,0 +1,6 @@
+Selfie file
+  PsiElement(SelfieTokenType.LEFT_CORNER)('╔═ ')
+  PsiElement(SelfieTokenType.PATH_ELEMENT)('Empty')
+  PsiElement(SelfieTokenType.RIGHT_CORNER)(' ═╗')
+  PsiErrorElement:SelfieTokenType.NEW_LINE expected
+    <empty list>
