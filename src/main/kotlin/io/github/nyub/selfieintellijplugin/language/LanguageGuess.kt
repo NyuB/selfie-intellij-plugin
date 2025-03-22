@@ -18,9 +18,10 @@ fun guessLanguage(selfieHeader: String): Language? {
     val mappedId = languageExtensionTable.firstNotNullOfOrNull { (id, ext) ->
         id.takeIf { ext.contains(idToSearch) }
     } ?: idToSearch
+
     return Language.getRegisteredLanguages().firstOrNull {
         it.id.lowercase() == mappedId.lowercase()
-    }
+    }?.takeIf { it != Language.ANY }
 }
 
 private val languageExtensionTable = listOf(

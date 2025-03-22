@@ -45,6 +45,10 @@ class LanguageGuessTest : LightPlatformTestCase() {
         guessLanguage("[txt] Something else") isEqualTo null
     }
 
+    fun `test do not return ANY`() {
+        guessLanguage("") isEqualTo null
+    }
+
     private infix fun <T> T.isEqualTo(other: T) {
         assertEquals(other, this)
     }
