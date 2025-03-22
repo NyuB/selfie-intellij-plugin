@@ -12,10 +12,6 @@ import com.intellij.psi.tree.IFileElementType
 import com.intellij.psi.tree.TokenSet
 
 class SelfieParserDefinition : ParserDefinition {
-    companion object {
-        @JvmField
-        val FILE = IFileElementType(SelfieLanguage)
-    }
 
     override fun createLexer(project: Project): Lexer = SelfieLexerAdapter()
 
@@ -37,3 +33,5 @@ class SelfieParserDefinition : ParserDefinition {
 
     override fun createFile(viewProvider: FileViewProvider): PsiFile = SelfieFile(viewProvider)
 }
+
+private val FILE = IFileElementType(SelfieLanguage)
