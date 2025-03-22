@@ -1,7 +1,0 @@
-Selfie file
-  PsiElement(SelfieTokenType.LEFT_CORNER)('╔═ ')
-  PsiElement(SelfieTokenType.PATH_ELEMENT)('Empty')
-  PsiErrorElement:SelfieTokenType.PATH_SEPARATOR or SelfieTokenType.RIGHT_CORNER expected
-    PsiElement(BAD_CHARACTER)(' ')
-  PsiElement(BAD_CHARACTER)('═')
-  PsiElement(BAD_CHARACTER)('╗')

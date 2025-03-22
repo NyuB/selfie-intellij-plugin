@@ -4,6 +4,7 @@ Selfie file
       PsiElement(SelfieTokenType.LEFT_CORNER)('╔═ ')
       SelfieHeaderPathImpl(HEADER_PATH)
         PsiElement(SelfieTokenType.PATH_ELEMENT)('Header')
-      PsiElement(SelfieTokenType.RIGHT_CORNER)(' ═╗\n')
+      PsiElement(SelfieTokenType.RIGHT_CORNER)(' ═╗')
+    PsiElement(SelfieTokenType.NEW_LINE)('\n')
     SelfieBodyImpl(BODY)
       PsiElement(SelfieTokenType.SNAPSHOT_CONTENT)('Single line')

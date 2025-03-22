@@ -6,6 +6,7 @@ Selfie file
         PsiElement(SelfieTokenType.PATH_ELEMENT)('TestName')
         PsiElement(SelfieTokenType.PATH_SEPARATOR)('/')
         PsiElement(SelfieTokenType.PATH_ELEMENT)('subPath')
-      PsiElement(SelfieTokenType.RIGHT_CORNER)(' ═╗\n')
+      PsiElement(SelfieTokenType.RIGHT_CORNER)(' ═╗')
+    PsiElement(SelfieTokenType.NEW_LINE)('\n')
     SelfieBodyImpl(BODY)
       PsiElement(SelfieTokenType.SNAPSHOT_CONTENT)('Single line')

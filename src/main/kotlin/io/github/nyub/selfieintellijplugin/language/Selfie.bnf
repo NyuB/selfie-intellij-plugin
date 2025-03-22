@@ -15,7 +15,7 @@
 
 selfieFile ::= snapshot+
 
-snapshot ::= header body
+snapshot ::= header NEW_LINE body
 
 header ::= LEFT_CORNER header_path RIGHT_CORNER
 
