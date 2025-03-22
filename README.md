@@ -14,6 +14,8 @@
 
 ## Description
 
+![Screenshot](doc/main_screenshot.png)
+
 <!-- Plugin description -->
 Provides support for the [Selfie test framework](https://selfie.dev/jvm)
 
