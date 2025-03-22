@@ -33,8 +33,8 @@ class LanguageGuessTest : LightPlatformTestCase() {
         guessLanguage("a.txt") isEqualTo Language.findLanguageByID("TEXT")!!
     }
 
-    fun `test no extension`() {
-        guessLanguage("json") isEqualTo null
+    fun `test plain language id`() {
+        guessLanguage("json") isEqualTo JsonLanguage.INSTANCE
     }
 
     fun `test further elements after extension`() {

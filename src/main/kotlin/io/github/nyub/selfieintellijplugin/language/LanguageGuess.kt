@@ -5,9 +5,11 @@ package io.github.nyub.selfieintellijplugin.language
 import com.intellij.lang.Language
 
 fun guessLanguage(selfieHeader: String): Language? {
-    val regex = Regex("([.][^./\\s\\t\\n\\r]+)?\\s*(\\[[^]]+])?$")
-    val find = regex.find(selfieHeader) ?: return null
-    val extension = find.groups[1]?.value?.substringAfter('.')
+    val pathAndFacetRegex = Regex("([^\\[]*)?\\s*(\\[[^]]+])?$")
+    val find = pathAndFacetRegex.find(selfieHeader) ?: return null
+    val extension = find.groups[1]?.value
+        ?.substringAfterLast('/')
+        ?.substringAfterLast('.')
     val facet = find.groups[2]?.value
         ?.substringAfter('[')
         ?.substringBefore(']')
