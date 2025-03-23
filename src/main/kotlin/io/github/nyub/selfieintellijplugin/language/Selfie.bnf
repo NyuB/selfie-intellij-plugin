@@ -17,9 +17,11 @@ selfieFile ::= snapshot+
 
 snapshot ::= header NEW_LINE body
 
-header ::= LEFT_CORNER header_path RIGHT_CORNER
+header ::= LEFT_CORNER header_path facet? RIGHT_CORNER
 
 header_path ::= PATH_ELEMENT (PATH_SEPARATOR PATH_ELEMENT)*
+
+facet ::= LEFT_BRACKET FACET_CONTENT RIGHT_BRACKET
 
 body ::= SNAPSHOT_CONTENT {
     implements=["com.intellij.psi.PsiLanguageInjectionHost"]

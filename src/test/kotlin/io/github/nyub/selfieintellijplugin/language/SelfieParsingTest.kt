@@ -13,6 +13,7 @@ internal class SelfieParsingTest : ParsingTestCase("", "ss", SelfieParserDefinit
     fun testMissingHeader() = doTest(true)
     fun testMultipleSnapshots() = doTest(true)
     fun testSingleLineSnapshot() = doTest(true)
+    fun testFacet() = doTest(true)
 
     /**
      * Ensure there is no test file without associated test
