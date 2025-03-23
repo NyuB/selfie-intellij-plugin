@@ -33,5 +33,9 @@
         <lang.elementManipulator
                 forClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieBody"
                 implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieBodyManipulator"/>
+
+        <lang.psiStructureViewFactory
+                language="Selfie"
+                implementationClass="io.github.nyub.selfieintellijplugin.language.structure.SelfieStructureViewFactory"/>
     </extensions>
 </idea-plugin>

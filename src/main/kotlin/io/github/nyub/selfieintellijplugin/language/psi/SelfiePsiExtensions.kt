@@ -17,4 +17,10 @@ object SelfiePsiExtensions {
     val SelfieSnapshot.path: String
         get() =
             header.headerPath.text
+
+    @JvmStatic
+    val SelfieSnapshot.pathAndFacet: String
+        get() {
+            return if (facet == null) path else "$path [$facet]"
+        }
 }

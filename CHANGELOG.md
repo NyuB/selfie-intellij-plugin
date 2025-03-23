@@ -6,6 +6,7 @@
 ### Added
 - Access to "edit injected content" action within language-injected snapshots
   + For example, it allows to preview markdown/mermaid/html ...
+- Structure view
 
 ## [0.0.1]
 ### Added
