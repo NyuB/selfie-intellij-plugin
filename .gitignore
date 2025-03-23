@@ -7,5 +7,7 @@ build
 # JFlex related artifacts
 *idea-flex.skeleton
 jflex-*.jar
-
 src/**/gen
+
+# Kotlin artifacts
+.kotlin/sessions/*.salive
