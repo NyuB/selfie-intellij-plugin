@@ -25,5 +25,5 @@ facet ::= LEFT_BRACKET FACET_CONTENT RIGHT_BRACKET
 
 body ::= SNAPSHOT_CONTENT {
     implements=["com.intellij.psi.PsiLanguageInjectionHost"]
-    mixin="io.github.nyub.selfieintellijplugin.language.psi.SelfieSnapshotBodyMixin"
+    mixin="io.github.nyub.selfieintellijplugin.language.psi.SelfieBodyMixin"
 }
