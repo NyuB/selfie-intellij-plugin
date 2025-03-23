@@ -1,6 +1,6 @@
 @file:JvmName("LanguageGuess")
 
-package io.github.nyub.selfieintellijplugin.language
+package io.github.nyub.selfieintellijplugin.language.injection
 
 import com.intellij.lang.Language
 

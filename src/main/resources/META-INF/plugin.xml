@@ -24,11 +24,11 @@
 
         <languageInjectionContributor
                 language="Selfie"
-                implementationClass="io.github.nyub.selfieintellijplugin.language.SelfieLanguageInjector"/>
+                implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieLanguageInjector"/>
 
         <languageInjectionPerformer
                 language="Selfie"
-                implementationClass="io.github.nyub.selfieintellijplugin.language.SelfieLanguageInjectionPerformer"/>
+                implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieLanguageInjectionPerformer"/>
     </extensions>
 
 

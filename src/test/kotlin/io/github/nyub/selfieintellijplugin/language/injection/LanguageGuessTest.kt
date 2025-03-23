@@ -1,4 +1,4 @@
-package io.github.nyub.selfieintellijplugin.language
+package io.github.nyub.selfieintellijplugin.language.injection
 
 import com.intellij.json.JsonLanguage
 import com.intellij.lang.Language
