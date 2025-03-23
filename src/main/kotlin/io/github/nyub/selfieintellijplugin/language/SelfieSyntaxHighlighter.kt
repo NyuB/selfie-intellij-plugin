@@ -6,6 +6,8 @@ import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase
 import com.intellij.psi.tree.IElementType
+import io.github.nyub.selfieintellijplugin.language.psi.SelfieLexerAdapter
+import io.github.nyub.selfieintellijplugin.language.psi.SelfieTypes
 
 class SelfieSyntaxHighlighter : SyntaxHighlighterBase() {
     companion object {

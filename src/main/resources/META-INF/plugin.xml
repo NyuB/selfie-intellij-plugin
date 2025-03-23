@@ -16,7 +16,7 @@
 
         <lang.parserDefinition
                 language="Selfie"
-                implementationClass="io.github.nyub.selfieintellijplugin.language.SelfieParserDefinition"/>
+                implementationClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieParserDefinition"/>
 
         <lang.syntaxHighlighterFactory
                 language="Selfie"

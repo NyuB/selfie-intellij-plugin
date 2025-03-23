@@ -1,16 +1,16 @@
 {
-  parserClass="io.github.nyub.selfieintellijplugin.language.SelfieParser"
+  parserClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieParser"
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 
   psiClassPrefix="Selfie"
   psiImplClassSuffix="Impl"
-  psiPackage="io.github.nyub.selfieintellijplugin.language"
-  psiImplPackage="io.github.nyub.selfieintellijplugin.language"
+  psiPackage="io.github.nyub.selfieintellijplugin.language.psi"
+  psiImplPackage="io.github.nyub.selfieintellijplugin.language.psi"
 
-  elementTypeHolderClass="io.github.nyub.selfieintellijplugin.language.SelfieTypes"
-  elementTypeClass="io.github.nyub.selfieintellijplugin.language.SelfieElementType"
-  tokenTypeClass="io.github.nyub.selfieintellijplugin.language.SelfieTokenType"
+  elementTypeHolderClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieTypes"
+  elementTypeClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieElementType"
+  tokenTypeClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieTokenType"
 }
 
 selfieFile ::= snapshot+
@@ -25,5 +25,5 @@ facet ::= LEFT_BRACKET FACET_CONTENT RIGHT_BRACKET
 
 body ::= SNAPSHOT_CONTENT {
     implements=["com.intellij.psi.PsiLanguageInjectionHost"]
-    mixin="io.github.nyub.selfieintellijplugin.language.SelfieSnapshotBodyMixin"
+    mixin="io.github.nyub.selfieintellijplugin.language.psi.SelfieSnapshotBodyMixin"
 }

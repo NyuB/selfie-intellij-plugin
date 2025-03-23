@@ -5,6 +5,8 @@ import com.intellij.lang.injection.general.LanguageInjectionContributor
 import com.intellij.lang.injection.general.SimpleInjection
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.parents
+import io.github.nyub.selfieintellijplugin.language.psi.SelfieBody
+import io.github.nyub.selfieintellijplugin.language.psi.SelfieSnapshot
 
 class SelfieLanguageInjector : LanguageInjectionContributor {
     override fun getInjection(context: PsiElement): Injection? {

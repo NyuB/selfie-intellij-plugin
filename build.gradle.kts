@@ -135,14 +135,14 @@ tasks {
     }
     generateParser {
         sourceFile.set(file("src/main/kotlin/io/github/nyub/selfieintellijplugin/language/Selfie.bnf"))
-        pathToParser.set("/io/github/nyub/selfieintellijplugin/language/SelfieParser.java")
-        pathToPsiRoot.set("/io/github/nyub/selfieintellijplugin/language")
+        pathToParser.set("/io/github/nyub/selfieintellijplugin/language/psi/SelfieParser.java")
+        pathToPsiRoot.set("/io/github/nyub/selfieintellijplugin/language/psi")
         targetRootOutputDir.set(file("src/main/gen"))
         purgeOldFiles.set(true)
     }
     generateLexer {
         sourceFile.set(file("src/main/kotlin/io/github/nyub/selfieintellijplugin/language/Selfie.flex"))
-        targetOutputDir.set(file("src/main/gen/io/github/nyub/selfieintellijplugin/language"))
+        targetOutputDir.set(file("src/main/gen/io/github/nyub/selfieintellijplugin/language/psi"))
         targetFile("SelfieLexer")
         purgeOldFiles.set(false)
         dependsOn(generateParser)

@@ -5,6 +5,7 @@ import com.intellij.lang.injection.general.Injection
 import com.intellij.lang.injection.general.LanguageInjectionPerformer
 import com.intellij.openapi.util.TextRange
 import com.intellij.psi.PsiElement
+import io.github.nyub.selfieintellijplugin.language.psi.SelfieBody
 
 class SelfieLanguageInjectionPerformer : LanguageInjectionPerformer {
     override fun isPrimary(): Boolean {

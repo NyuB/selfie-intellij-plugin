@@ -1,4 +1,4 @@
-package io.github.nyub.selfieintellijplugin.language
+package io.github.nyub.selfieintellijplugin.language.psi
 
 import com.intellij.psi.tree.TokenSet
 

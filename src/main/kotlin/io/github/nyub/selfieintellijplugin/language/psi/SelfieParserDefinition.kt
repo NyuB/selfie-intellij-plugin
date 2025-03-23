@@ -1,4 +1,4 @@
-package io.github.nyub.selfieintellijplugin.language
+package io.github.nyub.selfieintellijplugin.language.psi
 
 import com.intellij.lang.ASTNode
 import com.intellij.lang.ParserDefinition
@@ -10,6 +10,8 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import com.intellij.psi.tree.IFileElementType
 import com.intellij.psi.tree.TokenSet
+import io.github.nyub.selfieintellijplugin.language.SelfieFile
+import io.github.nyub.selfieintellijplugin.language.SelfieLanguage
 
 class SelfieParserDefinition : ParserDefinition {
 
