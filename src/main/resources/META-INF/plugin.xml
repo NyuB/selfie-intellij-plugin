@@ -29,7 +29,9 @@
         <languageInjectionPerformer
                 language="Selfie"
                 implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieLanguageInjectionPerformer"/>
+
+        <lang.elementManipulator
+                forClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieBody"
+                implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieBodyManipulator"/>
     </extensions>
-
-
 </idea-plugin>

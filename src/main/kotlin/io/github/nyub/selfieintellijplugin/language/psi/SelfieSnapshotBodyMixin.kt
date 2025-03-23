@@ -3,6 +3,7 @@ package io.github.nyub.selfieintellijplugin.language.psi
 import com.intellij.extapi.psi.ASTWrapperPsiElement
 import com.intellij.lang.ASTNode
 import com.intellij.openapi.util.TextRange
+import com.intellij.psi.ElementManipulators
 import com.intellij.psi.LiteralTextEscaper
 import com.intellij.psi.PsiLanguageInjectionHost
 
@@ -10,7 +11,7 @@ open class SelfieSnapshotBodyMixin(node: ASTNode) : ASTWrapperPsiElement(node), 
     override fun isValidHost(): Boolean = true
 
     override fun updateText(text: String): PsiLanguageInjectionHost {
-        return this
+        return ElementManipulators.handleContentChange(this, text)
     }
 
     override fun createLiteralTextEscaper(): LiteralTextEscaper<out PsiLanguageInjectionHost> {
