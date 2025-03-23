@@ -6,7 +6,7 @@ import kotlin.io.path.listDirectoryEntries
 import kotlin.io.path.nameWithoutExtension
 import kotlin.reflect.full.functions
 
-internal class SelfieParsingTest : ParsingTestCase("", "ss", SelfieParserDefinition()) {
+internal class SelfieParsingTest : ParsingTestCase("parsing", "ss", SelfieParserDefinition()) {
 
     fun testHeaderPath() = doTest(true)
     fun testMissingContent() = doTest(true)
@@ -19,7 +19,7 @@ internal class SelfieParsingTest : ParsingTestCase("", "ss", SelfieParserDefinit
      * Ensure there is no test file without associated test
      */
     fun testNoMissingTest() {
-        val testCases = testDataPath.let(::Path).listDirectoryEntries("*.ss").map { it.nameWithoutExtension }.sorted()
+        val testCases = myFullDataPath.let(::Path).listDirectoryEntries("*.ss").map { it.nameWithoutExtension }.sorted()
         val testMethods = SelfieParsingTest::class.functions
             .filter { it.name.startsWith("test") }
             .map { it.name.removePrefix("test") }
