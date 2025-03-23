@@ -9,7 +9,7 @@ import io.github.nyub.selfieintellijplugin.language.psi.SelfiePsiExtensions.face
 import io.github.nyub.selfieintellijplugin.language.psi.SelfiePsiExtensions.parentSnapshot
 import io.github.nyub.selfieintellijplugin.language.psi.SelfiePsiExtensions.path
 
-class SelfieLanguageInjector : LanguageInjectionContributor {
+class SelfieLanguageInjectionContributor : LanguageInjectionContributor {
     override fun getInjection(context: PsiElement): Injection? {
         if (context is SelfieBody) {
             val headerPath = context.parentSnapshot?.path ?: return null

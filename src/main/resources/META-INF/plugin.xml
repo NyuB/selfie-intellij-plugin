@@ -24,7 +24,7 @@
 
         <languageInjectionContributor
                 language="Selfie"
-                implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieLanguageInjector"/>
+                implementationClass="io.github.nyub.selfieintellijplugin.language.injection.SelfieLanguageInjectionContributor"/>
 
         <languageInjectionPerformer
                 language="Selfie"
