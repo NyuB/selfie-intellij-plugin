@@ -20,7 +20,7 @@
 
         <lang.syntaxHighlighterFactory
                 language="Selfie"
-                implementationClass="io.github.nyub.selfieintellijplugin.language.SelfieSyntaxHighlighterFactory"/>
+                implementationClass="io.github.nyub.selfieintellijplugin.language.highlighter.SelfieSyntaxHighlighterFactory"/>
 
         <languageInjectionContributor
                 language="Selfie"

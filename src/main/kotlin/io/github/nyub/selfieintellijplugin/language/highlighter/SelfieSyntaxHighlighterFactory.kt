@@ -1,4 +1,4 @@
-package io.github.nyub.selfieintellijplugin.language
+package io.github.nyub.selfieintellijplugin.language.highlighter
 
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.fileTypes.SyntaxHighlighterFactory
