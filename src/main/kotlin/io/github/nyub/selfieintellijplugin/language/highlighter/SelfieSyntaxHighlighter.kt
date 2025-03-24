@@ -26,11 +26,9 @@ class SelfieSyntaxHighlighter : SyntaxHighlighterBase() {
 
     override fun getHighlightingLexer(): Lexer = SelfieLexerAdapter()
 
-    override fun getTokenHighlights(tokenType: IElementType): Array<TextAttributesKey> {
-        return when (tokenType) {
-            SelfieTypes.HEADER -> HEADER_KEYS
-            SelfieTypes.SNAPSHOT_CONTENT -> CONTENT_KEYS
-            else -> arrayOf()
-        }
+    override fun getTokenHighlights(tokenType: IElementType): Array<TextAttributesKey> = when (tokenType) {
+        SelfieTypes.HEADER -> HEADER_KEYS
+        SelfieTypes.SNAPSHOT_CONTENT -> CONTENT_KEYS
+        else -> arrayOf()
     }
 }

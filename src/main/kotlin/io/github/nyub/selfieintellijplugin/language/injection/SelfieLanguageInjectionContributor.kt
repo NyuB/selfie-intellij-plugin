@@ -15,7 +15,6 @@ class SelfieLanguageInjectionContributor : LanguageInjectionContributor {
             val headerPath = context.parentSnapshot?.path ?: return null
             val facet = context.parentSnapshot?.facet
             return guessLanguage(headerPath, facet)?.let { SimpleInjection(it, "", "", null) }
-        }
-        return null
+        } else return null
     }
 }

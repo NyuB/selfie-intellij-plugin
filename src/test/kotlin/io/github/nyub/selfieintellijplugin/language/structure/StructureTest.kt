@@ -10,11 +10,7 @@ class StructureTest : BasePlatformTestCase() {
         }
     }
 
-    private infix fun <T> T.`is equal to`(other: T) {
-        assertEquals(other, this)
-    }
+    private infix fun <T> T.`is equal to`(other: T) = assertEquals(other, this)
 
-    override fun getTestDataPath(): String {
-        return "src/test/testData"
-    }
+    override fun getTestDataPath(): String = "src/test/testData"
 }

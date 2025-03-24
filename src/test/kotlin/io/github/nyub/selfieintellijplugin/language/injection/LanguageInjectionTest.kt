@@ -23,9 +23,7 @@ class LanguageInjectionTest : BasePlatformTestCase() {
         myFixture.availableIntentions offers "Inject language or reference"
     }
 
-    private operator fun IntentionAction.invoke() {
-        invoke(myFixture.project, myFixture.editor, myFixture.file)
-    }
+    private operator fun IntentionAction.invoke() = invoke(myFixture.project, myFixture.editor, myFixture.file)
 
     private infix fun Iterable<IntentionAction>.offers(actionText: String): IntentionAction {
         assertContainsElements(

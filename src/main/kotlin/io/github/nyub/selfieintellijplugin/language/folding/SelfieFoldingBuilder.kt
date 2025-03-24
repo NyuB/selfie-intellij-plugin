@@ -27,9 +27,7 @@ class SelfieFoldingBuilder : FoldingBuilderEx(), DumbAware {
         return result.toTypedArray()
     }
 
-    override fun getPlaceholderText(node: ASTNode): String {
-        return "..."
-    }
+    override fun getPlaceholderText(node: ASTNode): String = "..."
 
     override fun isCollapsedByDefault(node: ASTNode): Boolean = false
 }

@@ -7,7 +7,5 @@ class FoldingTest : BasePlatformTestCase() {
         myFixture.testFolding("${testDataPath}/Snapshot.ss")
     }
 
-    override fun getTestDataPath(): String {
-        return "src/test/testData/folding"
-    }
+    override fun getTestDataPath(): String = "src/test/testData/folding"
 }

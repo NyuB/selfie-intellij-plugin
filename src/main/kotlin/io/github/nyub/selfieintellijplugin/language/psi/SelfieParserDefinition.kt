@@ -19,19 +19,13 @@ class SelfieParserDefinition : ParserDefinition {
 
     override fun createParser(project: Project): PsiParser = SelfieParser()
 
-    override fun getFileNodeType(): IFileElementType {
-        return FILE
-    }
+    override fun getFileNodeType(): IFileElementType = FILE
 
     override fun getCommentTokens(): TokenSet = TokenSet.EMPTY
 
-    override fun getStringLiteralElements(): TokenSet {
-        return SelfieTokenSets.SNAPSHOT_CONTENT
-    }
+    override fun getStringLiteralElements(): TokenSet = SelfieTokenSets.SNAPSHOT_CONTENT
 
-    override fun createElement(node: ASTNode): PsiElement {
-        return SelfieTypes.Factory.createElement(node)
-    }
+    override fun createElement(node: ASTNode): PsiElement = SelfieTypes.Factory.createElement(node)
 
     override fun createFile(viewProvider: FileViewProvider): PsiFile = SelfieFile(viewProvider)
 }
