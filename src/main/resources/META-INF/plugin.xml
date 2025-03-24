@@ -37,5 +37,9 @@
         <lang.psiStructureViewFactory
                 language="Selfie"
                 implementationClass="io.github.nyub.selfieintellijplugin.language.structure.SelfieStructureViewFactory"/>
+
+        <lang.foldingBuilder
+                language="Selfie"
+                implementationClass="io.github.nyub.selfieintellijplugin.language.folding.SelfieFoldingBuilder"/>
     </extensions>
 </idea-plugin>
