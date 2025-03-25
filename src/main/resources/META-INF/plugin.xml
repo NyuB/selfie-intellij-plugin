@@ -4,6 +4,7 @@
     <name>Selfie</name>
     <vendor>io.github.nyub</vendor>
 
+    <depends>com.intellij.java</depends>
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
@@ -41,5 +42,9 @@
         <lang.foldingBuilder
                 language="Selfie"
                 implementationClass="io.github.nyub.selfieintellijplugin.language.folding.SelfieFoldingBuilder"/>
+
+        <codeInsight.lineMarkerProvider
+                language="JAVA"
+                implementationClass="io.github.nyub.selfieintellijplugin.language.linemarker.SelfieLineMarkerProvider"/>
     </extensions>
 </idea-plugin>

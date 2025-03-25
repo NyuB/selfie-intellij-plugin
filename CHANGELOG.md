@@ -8,6 +8,8 @@
   + For example, it allows to preview markdown/mermaid/html ...
 - Structure view
 - Snapshot folding
+- Navigation icon from Java test class to corresponding selfie snapshot
+
 ### Fixed
 - Facet parsing was expecting a leading space and would not parse `path[facet]`
 - Did not parse `╔═ [end of file] ═╗` token
