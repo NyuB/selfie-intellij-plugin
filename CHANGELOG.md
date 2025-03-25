@@ -8,6 +8,8 @@
   + For example, it allows to preview markdown/mermaid/html ...
 - Structure view
 - Snapshot folding
+### Fixed
+- Facet parsing was expecting a leading space and would not parse `path[facet]`
 
 ## [0.0.1]
 ### Added

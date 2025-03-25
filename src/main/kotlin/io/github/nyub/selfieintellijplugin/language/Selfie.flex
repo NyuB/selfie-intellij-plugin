@@ -24,7 +24,7 @@ PATH_ELEMENT=[^═╗/\n\r\[]*[^═╗/\n\r\s\[]
 PATH_SEPARATOR=[/]
 TOP_LEFT_CORNER=╔═\s
 TOP_RIGHT_CORNER=\s═╗
-LEFT_BRACKET=\s\[
+LEFT_BRACKET=\s*\[
 RIGHT_BRACKET=]
 FACET_STRING=[^\r\n\]]*
 
