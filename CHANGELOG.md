@@ -10,6 +10,7 @@
 - Snapshot folding
 ### Fixed
 - Facet parsing was expecting a leading space and would not parse `path[facet]`
+- Did not parse `╔═ [end of file] ═╗` token
 
 ## [0.0.1]
 ### Added

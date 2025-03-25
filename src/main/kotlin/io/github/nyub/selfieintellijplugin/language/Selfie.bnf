@@ -13,7 +13,7 @@
   tokenTypeClass="io.github.nyub.selfieintellijplugin.language.psi.SelfieTokenType"
 }
 
-selfieFile ::= snapshot+
+selfieFile ::= snapshot+ end_of_file?
 
 snapshot ::= header NEW_LINE body
 
@@ -27,3 +27,5 @@ body ::= SNAPSHOT_CONTENT {
     implements=["com.intellij.psi.PsiLanguageInjectionHost"]
     mixin="io.github.nyub.selfieintellijplugin.language.psi.SelfieBodyMixin"
 }
+
+end_of_file ::= SELFIE_END_OF_FILE

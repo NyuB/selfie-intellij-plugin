@@ -17,20 +17,22 @@ import io.github.nyub.selfieintellijplugin.language.psi.SelfieTypes;
 %eof}
 
 CONTENT_STRING_NEWLINE=\r\n|[\r\n]
-CONTENT_STRING_NON_EMPTY_LINE=[^╔\n\r][^\n\r]*\n?
+CONTENT_STRING_NON_EMPTY_LINE=[^╔═╗\n\r][^\n\r]*\n?
 CONTENT_STRING_LINE={CONTENT_STRING_NEWLINE} | {CONTENT_STRING_NON_EMPTY_LINE}
 CONTENT_STRING={CONTENT_STRING_LINE}*
-PATH_ELEMENT=[^═╗/\n\r\[]*[^═╗/\n\r\s\[]
+PATH_ELEMENT=[^╔═╗/\n\r\[]*[^╔═╗/\n\r\s\[]
 PATH_SEPARATOR=[/]
 TOP_LEFT_CORNER=╔═\s
 TOP_RIGHT_CORNER=\s═╗
 LEFT_BRACKET=\s*\[
 RIGHT_BRACKET=]
 FACET_STRING=[^\r\n\]]*
+SELFIE_END_OF_FILE={TOP_LEFT_CORNER} "[end of file]" {TOP_RIGHT_CORNER} [\n\r]*
 
 %state SNAPSHOT_CONTENT SNAPSHOT_START FACET
 
 %%
+<YYINITIAL>        {SELFIE_END_OF_FILE}     { return SelfieTypes.SELFIE_END_OF_FILE; }
 <YYINITIAL>        {TOP_LEFT_CORNER}        { return SelfieTypes.LEFT_CORNER; }
 <YYINITIAL>        {PATH_ELEMENT}           { return SelfieTypes.PATH_ELEMENT; }
 <YYINITIAL>        {PATH_SEPARATOR}         { return SelfieTypes.PATH_SEPARATOR; }

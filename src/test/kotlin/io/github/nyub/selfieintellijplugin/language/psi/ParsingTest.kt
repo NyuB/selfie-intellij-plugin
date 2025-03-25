@@ -14,6 +14,7 @@ internal class ParsingTest : ParsingTestCase("parsing", "ss", SelfieParserDefini
     fun testMultipleSnapshots() = doTest(true)
     fun testSingleLineSnapshot() = doTest(true)
     fun testFacet() = doTest(true)
+    fun testEndOfFile() = doTest(true)
 
     /**
      * Ensure there is no test file without associated test
